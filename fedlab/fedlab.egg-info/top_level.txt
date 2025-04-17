@@ -1,0 +1,5 @@
+board
+contrib
+core
+models
+utils
