@@ -1,0 +1,46 @@
+[build-system]
+requires = ["setuptools >= 64", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fedlab"
+version = "0.1.0" # the latest version on github
+authors = [
+    { name = "Dun Zeng", email = "zengdun.cs@gmail.com" },
+    { name = "Siqi Liang", email = "zszxlsq@gmail.com" },
+    { name = "Xiangjing Hu", email = "starryhu@foxmail.com" },
+]
+maintainers = [
+    { name = "Dun Zeng", email = "zengdun.cs@gmail.com" },
+    { name = "Siqi Liang", email = "zszxlsq@gmail.com" },
+    { name = "Xiangjing Hu", email = "starryhu@foxmail.com" },
+]
+description = "A flexible Federated Learning Framework based on PyTorch, simplifying your Federated Learning research."
+license = { text = "Apache-2.0 License" } # More standard way to represent license
+urls = { "Homepage" = "https://github.com/SMILELab-FL/FedLab" }
+classifiers = [
+    "Topic :: Scientific/Engineering",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Software Development",
+    "Topic :: Software Development :: Libraries",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "License :: OSI Approved :: Apache Software License",
+    "Programming Language :: Python :: 3",
+]
+requires-python = ">=3.6"
+dependencies = [
+    "torch>=1.7.1",
+    "torchvision>=0.8.2",
+    "numpy",
+    "pandas",
+    "scikit-learn",
+    "pynvml",
+    "tqdm",
+    "munch",
+    "seaborn",
+    "matplotlib",
+]
+
+[tool.setuptools]
+# packages = { find = { where = ["src"], include = ["fedlab*"] } }
+packages = { find = { include = ["fedlab", "fedlab/*"] } }
