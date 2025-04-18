@@ -25,13 +25,14 @@ python ./system/fedastw.py   -num_clients 100 \
                     -partition dirichlet \
                     -dir 0.1 \
                     -preprocess 1 \
-                    -mode 1 \
-                    -thresh 0.0 \
-                    -a 5 \
-                    -b 15\
-                    -tw \
+                    -mode 0 \
 | tee -a "$LOG_FILE"
                     # -startup 1 \
+                    # -thresh 0.0 \
+                    # -a 5 \
+                    # -b 15 \
+                    # -tw \ 
+
 
 # 打印日志路径
 echo "Log saved to $LOG_FILE"

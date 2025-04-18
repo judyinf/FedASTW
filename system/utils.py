@@ -56,8 +56,8 @@ def plot_to_tensorboard(x_data,y_data,tag,image,step,writer):
     """
     Plot the data to tensorboard.
     Args:
-        x_data: x data.
-        y_data: y data.
+        x_data: np.array  
+        y_data: List[List[float]] 
         tag: tag for the plot.
         image: image for the plot.
         step: step for the plot.
@@ -70,8 +70,8 @@ def plot_to_tensorboard(x_data,y_data,tag,image,step,writer):
     plt.fill_between(x_data, np.array(y_means) - np.array(y_stds), np.array(y_means) + np.array(y_stds), alpha=0.3)
 
     plt.xlabel("Communication Round")
-    plt.ylabel("Grandient Norm")
-    plt.title("Local Update Norm")
+    plt.ylabel("Local Update Norm")
+    # plt.title("")
     plt.grid(True)
 
     # Convert the Matplotlib figure to a PIL Image
